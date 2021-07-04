@@ -7,6 +7,10 @@ functions:
     handler: ./screenshot
     image: roger21gm/openfaas-selenium-screenshot:latest
     environment:
+      proxy: ""
+      image_width: "1920"
+      image_height: "1080"
       read_timeout: "1m"
       write_timeout: "1m"
       exec_timeout: "1m"
+
