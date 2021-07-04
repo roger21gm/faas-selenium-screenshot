@@ -12,5 +12,6 @@ def handle(req):
     screenshot = driver.get_screenshot_as_base64()
     
     driver.close()
+    driver.quit()
 
     return screenshot
