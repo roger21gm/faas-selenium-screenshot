@@ -4,8 +4,6 @@ provider:
   gateway: http://127.0.0.1:8080
 functions:
   screen:
-    language: python3-debian
-    fprocess: python3 index.py
     handler: ./screenshot
     image: roger21gm/openfaas-selenium-screenshot:0.5.6
     environment:
