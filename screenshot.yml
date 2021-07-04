@@ -5,7 +5,7 @@ provider:
 functions:
   screen:
     handler: ./screenshot
-    image: roger21gm/openfaas-selenium-screenshot:0.5.6
+    image: roger21gm/openfaas-selenium-screenshot:latest
     environment:
       read_timeout: "1m"
       write_timeout: "1m"
