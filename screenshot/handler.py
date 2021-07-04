@@ -18,6 +18,9 @@ def handle(req):
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
 
+    proxy = os.getenv('proxy', '')
+    options.add_argument('--proxy-server=%s' % proxy)
+
     driver = webdriver.Chrome(chrome_options=options)
     
     driver.get(req)
