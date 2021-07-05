@@ -10,6 +10,8 @@ def get_stdin():
             break
     return buf
 
+
+
 if(__name__ == "__main__"):
     st = get_stdin()
     ret = handler.handle(st)

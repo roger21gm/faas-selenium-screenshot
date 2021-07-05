@@ -15,6 +15,10 @@ RUN apt-get update \
 # Set home directory
 WORKDIR /home/app/
 
+# Configure entrypoint
+COPY entrypoint.sh entrypoint.sh
+RUN chmod +x entrypoint.sh
+
 # Copy script
 COPY index.py .
 RUN mkdir -p function
@@ -22,10 +26,6 @@ COPY screenshot function
 
 # Install selenium & other requierements
 RUN pip3 install -r /home/app/function/requirements.txt
-
-# Configure entrypoint
-COPY entrypoint.sh entrypoint.sh
-RUN chmod +x entrypoint.sh
 
 # Set watchdog process
 ENV fprocess="python3 index.py"
