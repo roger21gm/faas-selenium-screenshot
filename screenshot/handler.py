@@ -40,6 +40,6 @@ def handle(req):
             driver.close()
             driver.quit()
     
-    return "NOK"
+    raise Exception("Not valid url")
     
     
